@@ -89,6 +89,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 .play {
   display: grid;
@@ -120,6 +121,17 @@ body {
 }
 .play .colorWhite:hover {
   background: rgb(236, 236, 234);
+  border: 3px solid rgb(23, 225, 107);
+  transition: all 0.3s ease-in;
+  transform: translate3d(0px, -4px, 0px);
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transform: translate3d(0px, -4px, 0px);
+  -moz-transform: translate3d(0px, -4px, 0px);
+  -ms-transform: translate3d(0px, -4px, 0px);
+  -o-transform: translate3d(0px, -4px, 0px);
 }
 .play .colorBlack {
   background-color: #724e36;
@@ -127,8 +139,28 @@ body {
   height: 45px;
   display: flex;
 }
+.valid-move {
+  border: 2px solid #00fbff;
+}
+
 .play .colorBlack:hover {
   background: #9d6d4d;
+  border: 3px solid rgb(49, 223, 75);
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transform: translate3d(0px, -4px, 0px);
+  -webkit-transform: translate3d(0px, -4px, 0px);
+  -moz-transform: translate3d(0px, -4px, 0px);
+  -ms-transform: translate3d(0px, -4px, 0px);
+  -o-transform: translate3d(0px, -4px, 0px);
+}
+
+.play .colorBlack:active,
+.play .colorWhite:active {
+  border: 2px solid rgb(52, 235, 195);
 }
 /**ESTILOS PARA LA CLASE HTML DEL JUEGO AJEDREZ**/
 .contenido {

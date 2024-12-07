@@ -9,6 +9,8 @@
     />
     <title>Juego de Chess</title>
     <link rel="stylesheet" href="../STYLES/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.min.js"></script>
+
   </head>
   <style>
     * {
@@ -23,153 +25,155 @@
   </style>
   <body>
     <div class="User">
-      <h1 id="user"></h1>
     </div>
     <div class="ganeral">
       <div class="play">
-        <div class="Casilla colorWhite">
+        <!--Fila 1-->
+        <div id="c01" class="Casilla colorWhite" data-row="1" data-col="1">
           &#9814;
         </div>
-        <div class="Casilla  colorBlack">
+        <div id="c02" class="Casilla  colorBlack" data-row="1" data-col="2">
           &#9816;
         </div>
-        <div class="Casilla colorWhite">
-          &#9815
+        <div id="c01" class="Casilla colorWhite" data-row="1" data-col="3">
+          &#9815;
         </div>
-        <div class="Casilla  colorBlack">
+        <div id="c02" class="Casilla  colorBlack" data-row="1" data-col="4">
           &#9813;
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c01" class="Casilla colorWhite" data-row="1" data-col="5">
           &#9812;
         </div>
-        <div class="Casilla colorBlack">
-          &#9815
+        <div id="c02" class="Casilla colorBlack" data-row="1" data-col="6">
+          &#9815;
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c01" class="Casilla colorWhite" data-row="1" data-col="7">
           &#9816;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c02" class="Casilla colorBlack" data-row="1" data-col="8">
           &#9814;
         </div>
+<!--Fila 2-->
+        <div id="c01" class="Casilla colorBlack" data-row="2" data-col="1">
+          &#9817;
+        </div>
+        <div id="c02" class="Casilla colorWhite"  data-row="2" data-col="2">
+          &#9817;
+        </div>
+        <div id="c01" class="Casilla colorBlack"  data-row="2" data-col="3">
+          &#9817;
+        </div>
+        <div id="c02" class="Casilla colorWhite" data-row="2" data-col="4">
+          &#9817;
+        </div>
+        <div id="c01" class="Casilla colorBlack" data-row="2" data-col="5">
+          &#9817;
+        </div>
+        <div id="c02" class="Casilla colorWhite"  data-row="2" data-col="6">
+          &#9817;
+        </div>
+        <div id="c01" class="Casilla colorBlack" data-row="2" data-col="7">
+          &#9817;
+        </div>
+        <div id="c02" class="Casilla colorWhite" data-row="2" data-col="8">
+          &#9817;
+        </div>
+<!--Fila 3-->
+        <div id="c01" class="Casilla colorWhite" data-row="3" data-col="1"></div>
+        <div id="c02" class="Casilla colorBlack" data-row="3" data-col="2"></div>
+        <div id="c01" class="Casilla colorWhite" data-row="3" data-col="3"></div> 
+        <div id="c02" class="Casilla colorBlack"  data-row="3" data-col="4"></div>
+        <div id="c01" class="Casilla colorWhite"  data-row="3" data-col="5"></div>
+        <div id="c02" class="Casilla colorBlack" data-row="3" data-col="6"></div>
+        <div id="c01" class="Casilla colorWhite" data-row="3" data-col="7"></div>
+        <div id="c02" class="Casilla colorBlack" data-row="3" data-col="8"></div>
 
-        <div class="Casilla colorBlack">
-          &#9817;
-        </div>
-        <div class="Casilla colorWhite">
-          &#9817;
-        </div>
-        <div class="Casilla colorBlack">
-          &#9817;
-        </div>
-        <div class="Casilla colorWhite">
-          &#9817;
-        </div>
-        <div class="Casilla colorBlack">
-          &#9817;
-        </div>
-        <div class="Casilla colorWhite">
-          &#9817;
-        </div>
-        <div class="Casilla colorBlack">
-          &#9817;
-        </div>
-        <div class="Casilla colorWhite">
-          &#9817;
-        </div>
-
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-        <div class="Casilla colorBlack"></div>
-        <div class="Casilla colorWhite"></div>
-
-        <div class="Casilla colorWhite">
+        <div id="c01" class="Casilla colorBlack"    data-row="4" data-col="1"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="4" data-col="2"></div>
+        <div id="c01" class="Casilla colorBlack"    data-row="4" data-col="3"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="4" data-col="4"></div>
+        <div id="c01" class="Casilla colorBlack"    data-row="4" data-col="5"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="4" data-col="6"></div>
+        <div id="c01" class="Casilla colorBlack"    data-row="4" data-col="7"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="4" data-col="8"></div>
+<!--Fila 5-->
+        <div id="c01" class="Casilla colorWhite"    data-row="5" data-col="1"></div>
+        <div id="c02" class="Casilla colorBlack"    data-row="5" data-col="2"></div>
+        <div id="c01" class="Casilla colorWhite" data-row="5" data-col="3"></div>
+        <div id="c02" class="Casilla colorBlack" data-row="5" data-col="4"></div> 
+        <div id="c01" class="Casilla colorWhite" data-row="5" data-col="5"></div>
+        <div id="c02" class="Casilla colorBlack"    data-row="5" data-col="6"></div>
+        <div id="c01" class="Casilla colorWhite"    data-row="5" data-col="7"></div>
+        <div id="c02" class="Casilla colorBlack"    data-row="5" data-col="8"></div>
+<!--Fila 6-->
+        <div id="c01" class="Casilla colorBlack"    data-row="6" data-col="1"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="6" data-col="2"></div>
+        <div id="c01" class="Casilla colorBlack"    data-row="6" data-col="3"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="6" data-col="4"></div>
+        <div id="c01" class="Casilla colorBlack"    data-row="6" data-col="5"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="6" data-col="6"></div>
+        <div id="c01" class="Casilla colorBlack"    data-row="6" data-col="7"></div>
+        <div id="c02" class="Casilla colorWhite"    data-row="6" data-col="8"></div>
+<!--Fila 7-->
+        <div id="c01" class="Casilla colorWhite"    data-row="7" data-col="1">
           &#9823;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c02" class="Casilla colorBlack"    data-row="7" data-col="2">
           &#9823;
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c01" class="Casilla colorWhite"    data-row="7" data-col="3">
           &#9823;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c02" class="Casilla colorBlack"    data-row="7" data-col="4">
           &#9823;
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c01" class="Casilla colorWhite"    data-row="7" data-col="5">
           &#9823;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c02" class="Casilla colorBlack"    data-row="7" data-col="6">
           &#9823;
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c01" class="Casilla colorWhite"    data-row="7" data-col="7">
           &#9823;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c02" class="Casilla colorBlack"    data-row="7" data-col="8">
           &#9823;
         </div>
-
-        <div class="Casilla colorBlack">
+<!--Fila 8-->
+        <div id="c01" class="Casilla colorBlack"    data-row="8" data-col="1">
           &#9820;
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c02" class="Casilla colorWhite"    data-row="8" data-col="2">
           &#9822;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c01" class="Casilla colorBlack"    data-row="8" data-col="3">
           &#9821;
         </div>
-        <div class="Casilla colorWhite">
-          &#9819
+        <div id="c02" class="Casilla colorWhite"    data-row="8" data-col="4">
+          &#9819;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c01" class="Casilla colorBlack"    data-row="8" data-col="5"> 
           &#9818
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c02" class="Casilla colorWhite"    data-row="8" data-col="6">
           &#9821;
         </div>
-        <div class="Casilla colorBlack">
+        <div id="c01" class="Casilla colorBlack"    data-row="8" data-col="7">
           &#9822;
         </div>
-        <div class="Casilla colorWhite">
+        <div id="c02" class="Casilla colorWhite"    data-row="8" data-col="8">
           &#9820;
         </div>
       </div>
+      <div class="contenido">
+        <button id="btnStart">START GAME</button>
+        <button id="btnRestar">RESTART GAME</button>
+        <button id="btnClose">EXIT</button>
+      </div>
     </div>
-    <div class="contenido">
-      <button id="btnStart" onclick="retonar()">START GAME</button>
-      <button id="btnRestar">RESTART GAME</button>
-      <button id="btnClose">EXIT</button>
-    </div>
-
-    <script src="../COMPONENTS/js/script.js"></script>
+ <script type="module" src="../LOGIC/logic.js"></script>
+ <script type="module" src="../LOGIC/moverPiece.js"></script>
+   
+    <script type="module" src="../COMPONENTS/js/script.js"></script>
   </body>
 </html>

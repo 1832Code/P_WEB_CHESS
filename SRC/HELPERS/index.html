@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juego de Ajedrez</title>
+    <link rel="stylesheet" href="chess.css" />
+    <style>
+      :root {
+        --white-square: #f0d9b5;
+        --black-square: #b58863;
+        --highlight-square: rgba(100, 249, 83, 0.5);
+      }
+
+      #chess-board {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        width: 560px;
+        height: 560px;
+        border: 2px solid #333;
+      }
+
+      .square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .white-square {
+        background-color: var(--white-square);
+      }
+      .black-square {
+        background-color: var(--black-square);
+      }
+      .highlighted {
+        background-color: var(--highlight-square);
+      }
+
+      .piece {
+        user-select: none;
+        transition: transform 0.2s;
+      }
+
+      .piece:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chess-board"></div>
+    <div id="game-info">
+      <div id="turn-display">Turno: Blancas</div>
+      <div id="captured-pieces">
+        <div id="white-captured"></div>
+        <div id="black-captured"></div>
+      </div>
+    </div>
+    <script>
+      class ChessPiece {
+        constructor(color, type, position) {
+          this.color = color;
+          this.type = type;
+          this.position = position;
+          this.hasMoved = false;
+        }
+
+        getPossibleMoves(board) {
+          // Implementación específica por tipo de pieza
+          switch (this.type) {
+            case "pawn":
+              return this.getPawnMoves(board);
+            case "rook":
+              return this.getRookMoves(board);
+            case "knight":
+              return this.getKnightMoves(board);
+            case "bishop":
+              return this.getBishopMoves(board);
+            case "queen":
+              return this.getQueenMoves(board);
+            case "king":
+              return this.getKingMoves(board);
+          }
+        }
+
+        // Métodos para movimientos de cada pieza...
+      }
+
+      class ChessBoard {
+        constructor() {
+          this.board = this.initializeBoard();
+          this.currentTurn = "white";
+          this.selectedPiece = null;
+        }
+
+        initializeBoard() {
+          // Inicializar piezas en sus posiciones originales
+          const board = Array(8)
+            .fill()
+            .map(() => Array(8).fill(null));
+
+          // Peones
+          for (let i = 0; i < 8; i++) {
+            board[1][i] = new ChessPiece(
+              "white",
+              "pawn",
+              `${String.fromCharCode(97 + i)}2`
+            );
+            board[6][i] = new ChessPiece(
+              "black",
+              "pawn",
+              `${String.fromCharCode(97 + i)}7`
+            );
+          }
+
+          // Otras piezas...
+          return board;
+        }
+
+        renderBoard() {
+          const boardElement = document.getElementById("chess-board");
+          boardElement.innerHTML = "";
+
+          for (let row = 7; row >= 0; row--) {
+            for (let col = 0; col < 8; col++) {
+              const square = document.createElement("div");
+              square.classList.add("square");
+              square.classList.add(
+                (row + col) % 2 === 0 ? "white-square" : "black-square"
+              );
+
+              const piece = this.board[row][col];
+              if (piece) {
+                square.textContent = this.getPieceSymbol(piece);
+                square.classList.add("piece");
+              }
+
+              boardElement.appendChild(square);
+            }
+          }
+        }
+
+        getPieceSymbol(piece) {
+          const symbols = {
+            white: {
+              pawn: "♙",
+              rook: "♖",
+              knight: "♘",
+              bishop: "♗",
+              queen: "♕",
+              king: "♔",
+            },
+            black: {
+              pawn: "♟",
+              rook: "♜",
+              knight: "♞",
+              bishop: "♝",
+              queen: "♛",
+              king: "♚",
+            },
+          };
+          return symbols[piece.color][piece.type];
+        }
+      }
+
+      const game = new ChessBoard();
+      game.renderBoard();
+    </script>
+  </body>
+</html>
