@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Juego de Chess</title>
+    <link rel="stylesheet" href="../STYLES/style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #ffffff;
+      place-items: center;
+    }
+  </style>
+  <body>
+    <div class="User">
+      <h1 id="user"></h1>
+    </div>
+    <div class="ganeral">
+      <div class="play">
+        <div class="Casilla colorWhite">
+          &#9814;
+        </div>
+        <div class="Casilla  colorBlack">
+          &#9816;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9815
+        </div>
+        <div class="Casilla  colorBlack">
+          &#9813;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9812;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9815
+        </div>
+        <div class="Casilla colorWhite">
+          &#9816;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9814;
+        </div>
+
+        <div class="Casilla colorBlack">
+          &#9817;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9817;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9817;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9817;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9817;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9817;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9817;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9817;
+        </div>
+
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+        <div class="Casilla colorBlack"></div>
+        <div class="Casilla colorWhite"></div>
+
+        <div class="Casilla colorWhite">
+          &#9823;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9823;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9823;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9823;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9823;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9823;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9823;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9823;
+        </div>
+
+        <div class="Casilla colorBlack">
+          &#9820;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9822;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9821;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9819
+        </div>
+        <div class="Casilla colorBlack">
+          &#9818
+        </div>
+        <div class="Casilla colorWhite">
+          &#9821;
+        </div>
+        <div class="Casilla colorBlack">
+          &#9822;
+        </div>
+        <div class="Casilla colorWhite">
+          &#9820;
+        </div>
+      </div>
+    </div>
+    <div class="contenido">
+      <button id="btnStart" onclick="retonar()">START GAME</button>
+      <button id="btnRestar">RESTART GAME</button>
+      <button id="btnClose">EXIT</button>
+    </div>
+
+    <script src="../COMPONENTS/js/script.js"></script>
+  </body>
+</html>
